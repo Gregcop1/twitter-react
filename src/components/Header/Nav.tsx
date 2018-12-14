@@ -1,18 +1,18 @@
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => (
     <nav className="main-nav">
         <ul>
             <li>
-                <a href='/' className="nav-item nav-item--active">
+                <NavLink to='/' className="nav-item" activeClassName="nav-item--active" exact>
                     <i className="fa fa-home"/> Accueil
-                </a>
+                </NavLink>
             </li>
             <li>
-                <a href='/my-tweets' className="nav-item">
+                <NavLink to='/my-tweets' className="nav-item" activeClassName="nav-item--active" exact>
                     <i className="fa fa-bell-o"/> Mes tweets
-                </a>
+                </NavLink>
             </li>
         </ul>
     </nav>

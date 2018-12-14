@@ -7,11 +7,11 @@ import {withFullSecondaryAsideBar} from '../Aside/FullSecondaryAsideBar';
 import {ListView} from '../List';
 import {Tweet} from '../../interfaces';
 
-interface HomeContentProps {
+interface HomeViewProps {
   tweets: Tweet[],
 }
 
-const HomeContent = ({tweets}: HomeContentProps) => {
+const HomeView = ({tweets}: HomeViewProps) => {
   const [writerFold, setWriterFold] = useState(true);
   const toggleWriterDisplay = () => setWriterFold(!writerFold);
 
@@ -40,4 +40,4 @@ const enhance: any = compose(
   withFullPrimaryAsideBar
 );
 
-export const Home = enhance(HomeContent);
+export const Home = enhance(HomeView);

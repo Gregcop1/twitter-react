@@ -1,7 +1,7 @@
 import React, {createContext} from 'react';
 import {Route} from 'react-router-dom';
 import {Header} from '../Header';
-import {Home} from '../Pages';
+import {Home, MyTweets} from '../Pages';
 import '../../stylesheets/components/main-layout.scss';
 
 const initialUser = {
@@ -20,6 +20,7 @@ export const App = () => (
     <div className="main-container">
       <div className="container">
         <Route exact path="/" component={Home}/>
+        <Route exact path="/my-tweets" component={MyTweets}/>
       </div>
     </div>
   </UserContext.Provider>

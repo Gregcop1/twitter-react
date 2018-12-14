@@ -8,7 +8,7 @@ export const Header = () => (
         <div className="container">
             <Nav />
             <p className="logo">
-                <Logo className="logo" loading={true} />
+                <Logo className="logo" loading={false} />
             </p>
         </div>
     </header>
