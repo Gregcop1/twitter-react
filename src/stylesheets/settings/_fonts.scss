@@ -1,0 +1,19 @@
+////
+/// Fonts
+///
+/// @group Settings
+///
+////
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+/// Font fomily
+$roboto: 'Roboto', Arial, sans-serif;
+$font: $roboto;
+$fontAwesome: 'FontAwesome';
+
+/// Fonts weight
+/// They must reflect avalaible weights
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semibold: 500;
+$fw-bold: 700;

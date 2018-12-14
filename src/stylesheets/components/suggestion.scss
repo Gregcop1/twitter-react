@@ -1,0 +1,43 @@
+@import '../settings/colors';
+@import '../settings/dimensions';
+@import '../settings/fonts';
+
+.suggestion-list {
+  h3, ul{ margin: 0; padding: 0; }
+  h3 {
+    margin-bottom: 2*$page-padding;
+    font-size: 1.8em;
+  }
+  li {
+    margin: .5 *$page-padding; border-bottom: 1px solid $grey; padding: $page-padding 0; list-style-type: none;
+    font-weight: $fw-semibold;
+
+    .suggestion-avatar, .suggestion-metas { display: inline-block; vertical-align: top; }
+    .suggestion-avatar { margin-right: $page-padding; border-radius: 50%; }
+    .suggestion-metas { width: 180px; }
+    .suggestion-infos {
+      margin: 0; width: 100%; overflow: hidden;
+      text-overflow: ellipsis; white-space: nowrap;
+
+      button {
+        display: block; border: 1px solid $blue; border-radius: 25px; padding: 2px 15px;
+        color: $blue;
+
+        &:hover {
+          background-color: $bright-blue;
+          text-decoration: none;
+        }
+      }
+    }
+    .suggestion-account {
+      margin-left: $page-padding;
+      color: $dark-grey; font-size: .85em; font-weight: $fw-regular;
+    }
+  }
+  .suggestion-call-to-action {
+    display: block; margin: 1.5*$page-padding 0 $page-padding; color: $dark-blue;
+    font-size: 1.2em;
+
+    &:hover { color: $blue; }
+  }
+}

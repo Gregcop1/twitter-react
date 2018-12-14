@@ -1,0 +1,28 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{feature,js,jsx,json,ts,tsx}]
+indent_size = 2
+
+[*.{md,yaml,yml}]
+indent_size = 2
+trim_trailing_whitespace = false
+
+[*.sh]
+indent_style = tab
+
+[.gitmodules]
+indent_style = tab
+
+[Dockerfile]
+indent_style = tab
+
+[package.json]
+indent_size = 2

@@ -1,0 +1,60 @@
+@import '../settings/colors';
+@import '../settings/dimensions';
+@import '../settings/fonts';
+
+.block.writer-block {
+  position: relative; margin-bottom: 0; background: $bright-blue;
+
+  input[type="text"], textarea {
+    border: 1px solid $blue; border-radius: 30px; padding: 10px 20px; width: 100%;
+    font-size: 1.5em; line-height: 1.5;
+  }
+  input[type="text"] {
+    padding-left: 50px;
+    color: $blue;
+  }
+  .writer-block--fold .avatar {
+    position: absolute; top: 50%; left: 12px; border-radius: 22px; width: 42px; height: 42px;
+    transform: translateY(-50%);
+  }
+  .writer-block--fold .fa {
+    position: absolute; top: 50%; right: 30px; transform: translateY(-50%);
+    font-size: 1.5em; color: $blue;
+  }
+
+  .writer-actions {
+    position: relative;
+    text-align: right;
+  }
+  .writer-actions-controls-block {
+    position: absolute; top: 50%; left: 0; transform: translateY(-50%);
+
+    .fa {
+      display: inline-block; margin-right: $page-padding; border-color: transparent; padding: 7px; width: 35px; cursor: pointer;
+      transition: border-color 150ms linear;
+      font-size: 1.3em; color: $blue;
+
+      &:hover { border-color: $blue;  }
+    }
+  }
+
+  .writer-actions-submit-block {
+    .writer-actions-counter {
+      display: inline-block; margin: 0 20px;
+      transition: color 150ms linear;
+
+      &--danger { color: $dark-red; }
+      &--alert { color: $red; }
+    }
+
+    .writer-actions-submit {
+      border-radius: 20px; padding: 8px 16px; background: $medium-blue;
+      transition: background 150ms linear;
+      font-weight: $fw-bold; color: $white;
+
+      &--disabled { background: lighten($medium-blue, 20%); cursor: not-allowed; }
+      &:hover { text-decoration: none }
+      &:not(.writer-actions-submit--disabled):hover { background: $blue; }
+    }
+  }
+}

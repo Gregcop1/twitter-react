@@ -1,0 +1,12 @@
+////
+/// Layout of the page
+///
+/// @group Elements
+///
+////
+
+/// Text default font and color
+body {
+  background-color: $light-blue;
+  font-family: $font; font-weight: $fw-regular; color: $color-text;
+}

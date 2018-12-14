@@ -1,0 +1,38 @@
+////
+/// Colors
+///
+/// @group Settings
+///
+////
+
+/// Grey scale
+$white: #fff;
+
+$light-grey: #f5f8fa;
+$grey: #cecece;
+$dark-grey: #657786;
+
+$black: #303044;
+
+// Transparent grey scale
+$black-50: rgba($black, .5);
+
+/// Utility colors
+$red: #d40d12;
+$dark-red: #5c0002;
+$green: #5cb85c;
+
+/// Branding colors
+$light-blue:  #e6ecf0;
+$bright-blue: #e8f5fd;
+$medium-blue: #4AB3F4;
+$blue:        #1da1f2;
+$dark-blue:   darken($blue, 10%);
+
+$color-main: $blue;
+
+/// Functionnal colors
+$color-text: $black;
+$color-link: $color-main;
+$color-error: $red;
+$color-valid: $green;

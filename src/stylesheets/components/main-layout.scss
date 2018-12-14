@@ -1,0 +1,14 @@
+@import '../settings/colors';
+@import '../settings/dimensions';
+
+.main-container {
+  padding: $page-padding 0;
+
+  .transparent-container { display: inline; }
+  .column { display: inline-block; vertical-align: top; }
+  .aside-primary,
+  .aside-secondary { width: 23%; }
+  .aside-primary { margin-right: $page-padding; }
+  .aside-secondary { margin-left: $page-padding; }
+  .main-content { width: 50%; }
+}
