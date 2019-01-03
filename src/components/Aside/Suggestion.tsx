@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../stylesheets/components/suggestion.scss';
 
-const Trend = () => (
+const Suggestion = () => (
     <div className="block suggestion-list">
         <h3>Suggestions</h3>
         <ul>
@@ -40,4 +40,4 @@ const Trend = () => (
     </div>
 );
 
-export default Trend;
+export default Suggestion;

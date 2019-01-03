@@ -4,12 +4,12 @@ import Trend from './Trend';
 
 const FullPrimaryAsideBar = () => (
     <aside className="column aside-primary">
-        <ShortProfile/>
+        <ShortProfile />
         <Trend/>
     </aside>
 );
 
-export const withFullPrimaryAsideBar = (WrappedComponent) => (props) => (
+export const withFullPrimaryAsideBar = (WrappedComponent: any) => (props: any) => (
     <div className="transparent-container">
         <FullPrimaryAsideBar/>
         <WrappedComponent {...props}/>
