@@ -7,7 +7,7 @@ const FullSecondaryAsideBar = () => (
     </aside>
 );
 
-export const withFullSecondaryAsideBar = (WrappedComponent) => (props) => (
+export const withFullSecondaryAsideBar = (WrappedComponent: any) => (props: any) => (
     <div className="transparent-container">
         <WrappedComponent {...props}/>
         <FullSecondaryAsideBar/>

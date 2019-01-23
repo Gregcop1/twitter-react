@@ -8,7 +8,7 @@ import {Provider} from 'react-redux';
 import {store} from './redux/store';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/twitter-react/' : '/'}>
     <Provider store={store}>
       <App />
     </Provider>
