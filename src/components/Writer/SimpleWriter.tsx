@@ -14,7 +14,7 @@ export const SimpleWriter = ({focus}: SimpleWriterProps) => {
   return (
     <div className="writer-block--fold">
       <img src={ gravatarHelper.getAvatar(user.email) } alt={user.name} className="avatar" />
-      <input type="text" placeholder="Ecrivez votre texte ici..." onClick={focus}/>
+      <input type="text" placeholder="Ecrivez votre texte ici..." onFocus={focus}/>
       <i className="fa fa-picture-o"/>
     </div>
   );

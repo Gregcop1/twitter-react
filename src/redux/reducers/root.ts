@@ -1,13 +1,14 @@
-import tweetsHelper from '../../helpers/tweets';
-import {ADD_TWEET} from '../actions';
+import {ADD_TWEET, ADD_TWEET_SUCCESS, FETCH_TWEET, FETCH_TWEET_SUCCESS} from '../actions';
 import {Tweet} from '../../interfaces';
 
 interface Store {
+  pending: boolean,
   tweets: Tweet[],
 }
 
 const initialState: Store = {
-  tweets: tweetsHelper.generateTweets(30)
+  pending: false,
+  tweets: [],
 };
 
 export const rootReducer = (state: Store = initialState, action: any) => {
@@ -15,6 +16,12 @@ export const rootReducer = (state: Store = initialState, action: any) => {
     case ADD_TWEET:
       return {
         ...state,
+        pending: true,
+      };
+    case ADD_TWEET_SUCCESS:
+      return {
+        ...state,
+        pending: false,
         tweets: [
           {
             author: action.author,
@@ -28,6 +35,17 @@ export const rootReducer = (state: Store = initialState, action: any) => {
           },
           ...state.tweets
         ]
+      };
+    case FETCH_TWEET:
+      return {
+        ...state,
+        pending: true,
+      };
+    case FETCH_TWEET_SUCCESS:
+      return {
+        ...state,
+        pending: false,
+        tweets: action.payload,
       };
     default:
       return state;
